@@ -21,4 +21,4 @@ window.onload = function () {
         if (document.documentElement.scrollTop || document.body.scrollTop >= scrollDistance) { animatePoints(pointsArray);
         }
     });
-}
+} 
