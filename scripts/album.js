@@ -1,11 +1,10 @@
-// Example Album
 var albumPicasso = {
-    title: 'The Colors',
+    name: 'The Colors',
     artist: 'Pablo Picasso',
     label: 'Cubism',
     year: '1881',
-    albumArtUrl: 'assets/images/album_covers/01.png'
-    songs: {
+    albumArtUrl: 'assets/images/album_covers/01.png',
+    songs: [
     { title: 'Blue', duration: '4:26' },
          { title: 'Green', duration: '3:14' },
          { title: 'Red', duration: '5:01' },
@@ -13,9 +12,8 @@ var albumPicasso = {
          { title: 'Magenta', duration: '2:15'}
      ]
  };
- // Another Example Album
  var albumMarconi = {
-     title: 'The Telephone',
+     name: 'The Telephone',
      artist: 'Guglielmo Marconi',
      label: 'EM',
      year: '1909',
@@ -30,7 +28,7 @@ var albumPicasso = {
  };
 
 var albumThePixies = {
-     title: 'Doolittle',
+     name: 'Doolittle',
      artist: 'The Pixies',
      label: '4AD',
      year: '1989',
@@ -40,7 +38,7 @@ var albumThePixies = {
          { title: 'Tame', duration: '1:55' },
          { title: 'Wave of Mutilation', duration: '2:04'},
          { title: 'I Bleed', duration: '2:34' },
-         { title: 'Here Comes Your Man', duration: '3:21'}
+         { title: 'Here Comes Your Man', duration: '3:21'},
          { title: 'Dead', duration: '2:21' },
          { title: 'Monkey Gone to Heaven', duration: '2:56' },
          { title: 'Mr. Grieves', duration: '2:05'},
@@ -53,9 +51,10 @@ var albumThePixies = {
          { title: 'Gouge Away', duration: '2:45' },
      ]
  };
+
 var createSongRow = function(songNumber, songName, songLength) {
      var template =
-        '<tr class="album-view-song-item">'
+        '  <tr class="album-view-song-item">'
       + '  <td class="song-item-number">' + songNumber + '</td>'
       + '  <td class="song-item-title">' + songName + '</td>'
       + '  <td class="song-item-duration">' + songLength + '</td>'
@@ -73,9 +72,7 @@ var createSongRow = function(songNumber, songName, songLength) {
      var albumSongList = document.getElementsByClassName('album-view-song-list')[0];
 
  var setCurrentAlbum = function(album) {
- 
-     // #2
-     albumTitle.firstChild.nodeValue = album.title;
+     albumTitle.firstChild.nodeValue = album.name;
      albumArtist.firstChild.nodeValue = album.artist;
      albumReleaseInfo.firstChild.nodeValue = album.year + ' ' + album.label;
      albumImage.setAttribute('src', album.albumArtUrl);
@@ -102,4 +99,4 @@ albumImage.addEventListener("click", function(event) {
         index = 0;
     }
 });
-    
+ 
