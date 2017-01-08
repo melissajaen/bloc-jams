@@ -90,10 +90,10 @@ var createSongRow = function(songNumber, songName, songLength) {
      setCurrentAlbum(albumPicasso);
  };
 
-var albums = [albumPicasso, albumMarconi, albumThePixies];
+var album = [albumPicasso, albumMarconi, albumThePixies];
 var index = 1;
 albumImage.addEventListener("click", function(event) {
-    setCurrentAlbum(albums[index]);
+    setCurrentAlbum(album[index]);
     index++;
     if (index == album.length) {
         index = 0;
