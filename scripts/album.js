@@ -63,8 +63,7 @@ var createSongRow = function(songNumber, songName, songLength) {
     return $row;
         console.log("songNumber type is " + typeof songNumber + "\n and currentlyPlayingSongNumber type is " + typeof currentlyPlayingSongNumber);
     
- };
-
+ 
 
     $albumTitle.text(album.title);
      $albumArtist.text(album.artist);
