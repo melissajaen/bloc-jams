@@ -198,7 +198,7 @@ albumImage.addEventListener("click", function(event) {
  +    } else {
  +        alert("No parent found.");
         }
-    
+
 };
 
 
