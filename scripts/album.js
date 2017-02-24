@@ -230,5 +230,5 @@ $(document).ready(function(){
     $previousButton.click(previousSong);
     $nextButton.click(nextSong);
     $playPauseButton.click(togglePlayFromPlayerBar);
-});
+});  
  
